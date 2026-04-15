@@ -1,0 +1,32 @@
+<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-label="엘라의 작업실 창문">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6fd3c1" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fdfcf9" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fdfaf2"/>
+    </linearGradient>
+  </defs>
+  <rect x="14" y="14" width="292" height="292" rx="32" fill="url(#card)" stroke="#e5dfd4" stroke-width="1.5"/>
+  <rect x="60" y="50" width="200" height="180" rx="10" fill="url(#sky)" stroke="#1f3a5f" stroke-width="3"/>
+  <line x1="160" y1="50" x2="160" y2="230" stroke="#1f3a5f" stroke-width="3"/>
+  <line x1="60" y1="140" x2="260" y2="140" stroke="#1f3a5f" stroke-width="3"/>
+  <circle cx="110" cy="90" r="13" fill="#6fd3c1"/>
+  <ellipse cx="205" cy="100" rx="24" ry="7" fill="#ffffff" opacity="0.85"/>
+  <ellipse cx="210" cy="105" rx="16" ry="5" fill="#ffffff" opacity="0.9"/>
+  <path d="M80 185 Q110 175 140 185" stroke="#6fd3c1" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M180 195 Q215 185 250 195" stroke="#6fd3c1" stroke-width="2" fill="none" opacity="0.5"/>
+  <rect x="48" y="228" width="224" height="10" rx="3" fill="#1f3a5f"/>
+  <path d="M78 248 L84 285 L118 285 L124 248 Z" fill="#1f3a5f"/>
+  <path d="M100 248 Q88 228 93 210" stroke="#6fd3c1" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M100 248 Q112 236 120 215" stroke="#6fd3c1" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="91" cy="214" r="7" fill="#6fd3c1"/>
+  <circle cx="112" cy="220" r="6" fill="#6fd3c1"/>
+  <circle cx="102" cy="205" r="5" fill="#6fd3c1"/>
+  <rect x="168" y="252" width="74" height="34" rx="3" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+  <line x1="178" y1="262" x2="230" y2="262" stroke="#1f3a5f" stroke-width="1.4"/>
+  <line x1="178" y1="270" x2="225" y2="270" stroke="#1f3a5f" stroke-width="1.4"/>
+  <line x1="178" y1="278" x2="232" y2="278" stroke="#1f3a5f" stroke-width="1.4"/>
+</svg>

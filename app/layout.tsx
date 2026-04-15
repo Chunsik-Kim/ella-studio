@@ -1,0 +1,50 @@
+import './globals.css'
+import Link from 'next/link'
+import type { ReactNode } from 'react'
+
+export const metadata = {
+  title: '엘라의 작업실',
+  description: '우리들의 디지털 세계를 기록하는 공간',
+}
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="ko">
+      <body>
+        <header className="site-header">
+          <div className="inner">
+            <Link href="/" className="logo">
+              엘라의 <span>작업실</span>
+            </Link>
+            <nav>
+              <ul className="nav-list">
+                <li><Link href="/setup">작업실 세우기</Link></li>
+                <li><Link href="/records">운영 기록</Link></li>
+                <li><Link href="/automation">자동화 구축기</Link></li>
+                <li><Link href="/guides">실전 가이드</Link></li>
+                <li><Link href="/about">About</Link></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        {children}
+        <footer>
+          <div className="footer-inner">
+            <div className="footer-brand">
+              <h4>엘라의 작업실</h4>
+              <p>우리들의 디지털 세계를 기록하는 공간.</p>
+            </div>
+            <ul className="footer-links">
+              <li><a href="#">Threads</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">GitHub</a></li>
+            </ul>
+          </div>
+          <div className="footer-bottom">
+            © 2026 엘라의 작업실 · ella-studio
+          </div>
+        </footer>
+      </body>
+    </html>
+  )
+}
