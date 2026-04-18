@@ -38,6 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <li><a href="#">Threads</a></li>
               <li><a href="#">Instagram</a></li>
               <li><a href="#">GitHub</a></li>
+              <li><a href="mailto:cskim2326@gmail.com">쥔장 연락처</a></li>
             </ul>
           </div>
           <div className="footer-bottom">
