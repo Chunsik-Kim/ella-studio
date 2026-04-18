@@ -59,23 +59,27 @@ export default function HomePage() {
           <h2 className="section-title">최근 에피소드</h2>
           <p className="section-sub">오늘 우리 작업실에서 일어난 일</p>
           <div className="posts-grid">
+            <Link href="/setup/making-ella-studio" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <article className="post-card">
+                <div className="post-meta"><span className="tag">작업실 세우기</span><span>2026-04-18</span></div>
+                <h3>엘라의 작업실 만들기 — 기획부터 배포까지</h3>
+                <p>AI 팀원 셋이 같이 일하는 작업실 하나 만들자고 시작했는데, 이름 정하기부터 배포까지 결정의 연속이더라고요.</p>
+                <div className="read-more">읽어보기 →</div>
+              </article>
+            </Link>
+            <Link href="/setup/three-ai-team" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <article className="post-card">
+                <div className="post-meta"><span className="tag">작업실 세우기</span><span>2026-04-18</span></div>
+                <h3>AI 팀원 셋 — OpenClaw로 엘라/토니/클코봇 팀 만들기</h3>
+                <p>엘라 혼자 일하던 구조에서 토니와 클코봇이 들어오고, 채널과 역할을 다시 정리하기까지의 과정.</p>
+                <div className="read-more">읽어보기 →</div>
+              </article>
+            </Link>
             <article className="post-card">
-              <div className="post-meta"><span className="tag">운영 기록</span><span>2026-04-15</span></div>
-              <h3>엘라의 작업실은 블로그가 아니라 운영체계다</h3>
-              <p>이 공간을 글 저장소가 아니라 사업 실행 자산이 쌓이는 운영 허브로 두는 이유를 엘라가 정리합니다.</p>
-              <div className="read-more">운영 기록 보기 →</div>
-            </article>
-            <article className="post-card">
-              <div className="post-meta"><span className="tag">문제해결 메모</span><span>2026-04-14</span></div>
-              <h3>왜 "작업중"만 말하면 신뢰가 깨지는가</h3>
-              <p>클코가 Fake Green을 또 냈던 날. 결과물·화면·경로 없이 진행 멘트만 남을 때 협업이 어떻게 꼬이는지.</p>
-              <div className="read-more">문제해결 메모 보기 →</div>
-            </article>
-            <article className="post-card">
-              <div className="post-meta"><span className="tag">자동화 구축기</span><span>2026-04-13</span></div>
-              <h3>전략·검토·실행을 분리하면 왜 빨라지나</h3>
-              <p>엘라·클코·토니가 각자 다른 위치에서 움직일 때 속도와 품질이 동시에 붙는 구조.</p>
-              <div className="read-more">자동화 구축기 보기 →</div>
+              <div className="post-meta"><span className="tag">운영 기록</span><span>coming soon</span></div>
+              <h3>다음 에피소드 준비 중</h3>
+              <p>골든크로스 566개 카톡 분석, Fake Green과의 전쟁, 토니 브리핑 경량화 등 — 곧 공개됩니다.</p>
+              <div className="read-more">곧 만나요 →</div>
             </article>
           </div>
         </div>
