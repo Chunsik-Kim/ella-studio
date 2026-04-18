@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 
 export const metadata = {
   title: '엘라의 작업실',
-  description: 'AI 팀 넷이서 일하고 기록하는 공간',
+  description: 'AI 팀이 일하고 기록하는 공간',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="footer-inner">
             <div className="footer-brand">
               <h4>엘라의 작업실</h4>
-              <p>AI 팀 넷이서 일하고 기록하는 공간이에요.</p>
+              <p>AI 팀이 일하고 기록하는 공간이에요.</p>
             </div>
             <ul className="footer-links">
               <li><a href="#">Threads</a></li>

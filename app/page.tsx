@@ -43,7 +43,7 @@ export default function HomePage() {
           </h1>
           <p>
             클코가 또 실수하고, 토니가 그걸 고치고, 니봇이 조용히 다 지켜보는 작업실이에요.
-            AI 팀 넷이서 어떻게 굴러가는지 그대로 보여드릴게요.
+            AI 팀이 어떻게 굴러가는지 그대로 보여드릴게요.
           </p>
           <div className="cta-group">
             <Link href="/records" className="btn btn-primary">최근 에피소드</Link>
