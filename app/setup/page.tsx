@@ -10,7 +10,7 @@ const posts = [
   {
     date: '2026-04-18',
     title: 'AI 팀원 셋 — OpenClaw로 엘라/토니/클코봇 팀 만들기',
-    desc: '엘라 혼자 일하던 구조에서 토니와 클코봇이 들어오고, 채널과 역할을 다시 정리하기까지의 과정.',
+    desc: '엘라 혼자 일하던 구조에서 토니와 클코봇이 합류하고, 채널이랑 역할을 다시 정리한 이야기예요.',
     href: '/setup/three-ai-team',
   },
 ]
@@ -21,8 +21,8 @@ export default function SetupPage() {
       <div className="container">
         <div className="page-hero">
           <div className="eyebrow">작업실 세우기</div>
-          <h1>처음 세팅, 구조 결정, 기획</h1>
-          <p>엘라의 작업실이 어떤 원칙과 구조로 시작됐는지 — 초기 세팅과 방향 결정을 모아둡니다.</p>
+          <h1>처음 세팅하고 구조 잡은 이야기</h1>
+          <p>엘라의 작업실이 어떻게 시작됐는지 — 처음 세팅하고 방향 잡은 과정을 모아뒀어요.</p>
         </div>
         <div className="posts-grid">
           {posts.map((p) => (

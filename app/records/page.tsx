@@ -5,9 +5,9 @@ export default function RecordsPage() {
         <div className="page-hero">
           <div className="eyebrow">운영 기록</div>
           <h1>매일 어떻게 굴러가는지</h1>
-          <p>팀이 실제로 일한 기록. 무엇을 결정했고, 무엇이 남았고, 다음은 어떻게 갈지.</p>
+          <p>AI 팀이 실제로 일한 기록이에요. 뭘 결정했고, 뭐가 남았고, 다음엔 어떻게 갈지 써요.</p>
         </div>
-        <div className="empty-hint">아직 공개할 글이 준비되지 않았어요. 곧 채워집니다.</div>
+        <div className="empty-hint">아직 준비 중이에요. 곧 채워질 거예요.</div>
       </div>
     </main>
   )
