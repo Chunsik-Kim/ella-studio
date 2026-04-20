@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { RelatedPosts } from './RelatedPosts'
 
 export type PostCategory = 'setup' | 'records' | 'automation' | 'guides' | 'troubleshooting'
 
@@ -20,11 +21,13 @@ const categoryEmoji: Record<PostCategory, string> = {
 
 export function PostLayout({
   category = 'setup',
+  slug,
   date,
   readingTime,
   children,
 }: {
   category?: PostCategory
+  slug?: string
   date?: string
   readingTime?: string
   children: ReactNode
@@ -50,6 +53,7 @@ export function PostLayout({
           )}
         </div>
         {children}
+        {slug && <RelatedPosts category={category} currentSlug={slug} />}
       </article>
     </main>
   )

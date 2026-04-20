@@ -20,6 +20,7 @@ export default async function SetupPostPage({
   return (
     <PostLayout
       category={post.category}
+      slug={post.slug}
       date={post.date}
       readingTime={post.readingTime}
     >

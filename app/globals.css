@@ -598,3 +598,104 @@ footer {
   font-size: 13.5px;
   font-weight: 500;
 }
+
+/* =========================================================
+   v4: TL;DR 박스 · 같이 보면 좋은 편 카드 (2026-04-20)
+   ========================================================= */
+
+/* --- TL;DR 박스 (글 상단 요약) --- */
+.site-wrap .tldr-box {
+  background: var(--code-bg);
+  border-left: 4px solid var(--primary);
+  padding: 18px 22px;
+  margin: 0 0 32px;
+  border-radius: 6px;
+}
+.site-wrap .tldr-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.site-wrap .tldr-body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+}
+.site-wrap .tldr-body p { margin-bottom: 6px; }
+.site-wrap .tldr-body p:last-child { margin-bottom: 0; }
+.site-wrap .tldr-body ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+.site-wrap .tldr-body ul li {
+  padding-left: 0;
+  margin-bottom: 6px;
+}
+.site-wrap .tldr-body ul li::before { display: none; }
+
+/* --- 같이 보면 좋은 편 카드 (글 끝) --- */
+.related-posts {
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.related-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--subtext);
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .related-grid { grid-template-columns: 1fr; }
+}
+.related-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(31, 58, 95, 0.08);
+}
+.related-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+.related-date { color: var(--subtext); }
+.related-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  line-height: 1.4;
+  color: var(--text);
+}
+.related-card p {
+  font-size: 13px;
+  color: var(--subtext);
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
