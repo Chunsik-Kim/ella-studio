@@ -1,4 +1,4 @@
-import Post from '../../content/posts/ella-operating-system.mdx'
+import Post from '../../content/posts/03-ella-operating-system.mdx'
 
 export default function PostsPage() {
   return (
