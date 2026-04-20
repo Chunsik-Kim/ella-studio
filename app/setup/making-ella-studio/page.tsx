@@ -1,12 +1,10 @@
 import Post from '../../../content/posts/01-making-ella-studio.mdx'
+import { PostLayout } from '../../../components/PostLayout'
 
 export default function MakingEllaStudioPage() {
   return (
-    <main className="site-wrap">
-      <div className="card">
-        <div className="eyebrow">작업실 세우기</div>
-        <Post />
-      </div>
-    </main>
+    <PostLayout category="setup" date="2026-04-18" readingTime="4분">
+      <Post />
+    </PostLayout>
   )
 }

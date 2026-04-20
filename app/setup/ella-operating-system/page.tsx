@@ -1,12 +1,10 @@
 import Post from '../../../content/posts/03-ella-operating-system.mdx'
+import { PostLayout } from '../../../components/PostLayout'
 
 export default function EllaOperatingSystemPage() {
   return (
-    <main className="site-wrap">
-      <div className="card">
-        <div className="eyebrow">작업실 세우기</div>
-        <Post />
-      </div>
-    </main>
+    <PostLayout category="setup" date="2026-04-20" readingTime="5분">
+      <Post />
+    </PostLayout>
   )
 }

@@ -398,3 +398,104 @@ footer {
   .hero-illust img { width: 160px; height: 160px; }
   .hero-tag { font-size: 10px; }
 }
+
+/* =========================================================
+   v2: 뽀짝이 서재 참고 — 카테고리 컬러 / Callout / 메타바
+   2026-04-20 신설
+   ========================================================= */
+
+:root {
+  /* 카테고리 컬러 체계 */
+  --cat-setup: #1f3a5f;           --cat-setup-bg: rgba(31,58,95,0.10);
+  --cat-records: #0d9488;         --cat-records-bg: rgba(20,184,166,0.12);
+  --cat-automation: #d97706;      --cat-automation-bg: rgba(245,158,11,0.12);
+  --cat-guides: #7c3aed;          --cat-guides-bg: rgba(139,92,246,0.12);
+  --cat-troubleshooting: #dc2626; --cat-troubleshooting-bg: rgba(239,68,68,0.10);
+
+  /* Callout 색상 */
+  --callout-tip-bg: #ecfdf5;      --callout-tip-border: #10b981;
+  --callout-warning-bg: #fef3c7;  --callout-warning-border: #d97706;
+  --callout-quote-bg: #f5f3ff;    --callout-quote-border: #8b5cf6;
+  --callout-info-bg: #ecfeff;     --callout-info-border: #0891b2;
+  --callout-note-bg: #fff7ed;     --callout-note-border: #ea580c;
+}
+
+/* --- 포스트 메타바 (카테고리 뱃지 + 발행일 + 읽기시간) --- */
+.post-meta-bar {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 28px; padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px; color: var(--subtext);
+}
+.cat-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 999px;
+  font-weight: 700; font-size: 12px; letter-spacing: 0.01em;
+}
+.cat-badge--setup           { background: var(--cat-setup-bg);           color: var(--cat-setup); }
+.cat-badge--records         { background: var(--cat-records-bg);         color: var(--cat-records); }
+.cat-badge--automation      { background: var(--cat-automation-bg);      color: var(--cat-automation); }
+.cat-badge--guides          { background: var(--cat-guides-bg);          color: var(--cat-guides); }
+.cat-badge--troubleshooting { background: var(--cat-troubleshooting-bg); color: var(--cat-troubleshooting); }
+.post-meta-dot { color: var(--border); }
+
+/* --- Callout 박스 (MDX에서 <Callout type="tip|warning|quote|info|note"> 사용) --- */
+.callout {
+  margin: 22px 0; padding: 16px 20px;
+  border-radius: 10px; border-left: 4px solid;
+  font-size: 15px; line-height: 1.75;
+}
+.callout-title {
+  display: block; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout--tip     { background: var(--callout-tip-bg);     border-color: var(--callout-tip-border); }
+.callout--tip .callout-title     { color: var(--callout-tip-border); }
+.callout--warning { background: var(--callout-warning-bg); border-color: var(--callout-warning-border); }
+.callout--warning .callout-title { color: #92400e; }
+.callout--quote   { background: var(--callout-quote-bg);   border-color: var(--callout-quote-border); }
+.callout--quote .callout-title   { color: var(--callout-quote-border); }
+.callout--info    { background: var(--callout-info-bg);    border-color: var(--callout-info-border); }
+.callout--info .callout-title    { color: var(--callout-info-border); }
+.callout--note    { background: var(--callout-note-bg);    border-color: var(--callout-note-border); }
+.callout--note .callout-title    { color: var(--callout-note-border); }
+
+/* --- 본문 가독성 보강 --- */
+.site-wrap h2 {
+  display: flex; align-items: center; gap: 10px;
+}
+.site-wrap h2::before {
+  content: ''; display: inline-block;
+  width: 4px; height: 20px;
+  background: var(--accent); border-radius: 2px;
+  flex-shrink: 0;
+}
+.site-wrap code { color: var(--primary); font-weight: 500; }
+.site-wrap ul li::marker { color: var(--accent); }
+.site-wrap ol li::marker { color: var(--primary); font-weight: 700; }
+
+/* blockquote 강조 (따옴표 장식) */
+.site-wrap blockquote {
+  position: relative; padding-left: 42px; font-style: italic;
+}
+.site-wrap blockquote::before {
+  content: '"'; position: absolute; top: -8px; left: 10px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 44px; line-height: 1; color: var(--accent);
+  font-style: normal;
+}
+
+/* 네비게이션 카테고리별 hover 컬러 */
+.nav-list a[href="/setup"]:hover      { color: var(--cat-setup); }
+.nav-list a[href="/records"]:hover    { color: var(--cat-records); }
+.nav-list a[href="/automation"]:hover { color: var(--cat-automation); }
+.nav-list a[href="/guides"]:hover     { color: var(--cat-guides); }
+
+/* 카드 hover (목록에서) */
+.posts-grid .post-card { transition: transform .2s, box-shadow .2s; }
+.posts-grid a:hover .post-card {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(31,58,95,0.10);
+}

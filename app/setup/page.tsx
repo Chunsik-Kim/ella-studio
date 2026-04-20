@@ -34,7 +34,7 @@ export default function SetupPage() {
           {posts.map((p) => (
             <Link key={p.href} href={p.href} style={{ textDecoration: 'none', color: 'inherit' }}>
               <article className="post-card">
-                <div className="post-meta"><span className="tag">작업실 세우기</span><span>{p.date}</span></div>
+                <div className="post-meta"><span className="cat-badge cat-badge--setup">🪟 작업실 세우기</span><span>{p.date}</span></div>
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <div className="read-more">읽어보기 →</div>
