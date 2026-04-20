@@ -13,6 +13,12 @@ const posts = [
     desc: '엘라 혼자 일하던 구조에서 토니와 클코봇이 합류하고, 채널이랑 역할을 다시 정리한 이야기예요.',
     href: '/setup/three-ai-team',
   },
+  {
+    date: '2026-04-20',
+    title: '엘라의 작업실은 블로그가 아니라 운영체계예요',
+    desc: '백업이 엉뚱한 곳에 두 번 생긴 사건. 작업실은 글만 쌓는 공간이 아니라 기록·백업·전파까지 정해진 운영체계여야 한다는 걸 다시 확인한 이야기예요.',
+    href: '/setup/ella-operating-system',
+  },
 ]
 
 export default function SetupPage() {
