@@ -1,0 +1,29 @@
+import { notFound } from 'next/navigation'
+import { getPostMeta, getPostsByCategory } from '../../../content/posts'
+import { PostLayout } from '../../../components/PostLayout'
+
+export function generateStaticParams() {
+  return getPostsByCategory('setup').map((p) => ({ slug: p.slug }))
+}
+
+export default async function SetupPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const post = getPostMeta(slug)
+  if (!post || post.category !== 'setup' || post.draft) notFound()
+
+  const { default: Post } = await import(`../../../content/posts/${slug}.mdx`)
+
+  return (
+    <PostLayout
+      category={post.category}
+      date={post.date}
+      readingTime={post.readingTime}
+    >
+      <Post />
+    </PostLayout>
+  )
+}
