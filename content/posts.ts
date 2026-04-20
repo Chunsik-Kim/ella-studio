@@ -48,3 +48,17 @@ export function getPostsByCategory(category: PostCategory): PostMeta[] {
     .filter((p) => p.category === category && !p.draft)
     .sort((a, b) => a.episode - b.episode)
 }
+
+export function getAllPublishedPosts(): PostMeta[] {
+  return getAllPostMeta()
+    .filter((p) => !p.draft)
+    .sort((a, b) => b.date.localeCompare(a.date))
+}
+
+export const categoryLabel: Record<PostCategory, string> = {
+  setup: '작업실 세우기',
+  records: '운영 기록',
+  automation: '자동화 구축기',
+  guides: '실전 가이드',
+  troubleshooting: '문제해결',
+}
