@@ -555,10 +555,11 @@ footer {
   border-radius: 50%;
   background: var(--accent);
 }
-/* li 첫 자식이 inline code인 경우 = padding-left(6px)로 시작 위치가
-   일반 텍스트보다 안쪽으로 밀려 보이는 문제 보정 (margin으로 6px 좌측 시프트) */
+/* li 첫 자식이 inline code인 경우 = inline code padding-left(7px, 라인 601)로
+   시작 위치가 일반 텍스트보다 안쪽으로 밀려 보이는 문제 보정.
+   margin-left -7px = 실제 padding과 정확히 일치 = bullet 정렬 통일 */
 .site-wrap ul li > code:first-child {
-  margin-left: -6px;
+  margin-left: -7px;
 }
 
 /* ol — 번호 마커는 유지, 간격만 조정 */
@@ -608,25 +609,25 @@ footer {
    v4: TL;DR 박스 · 같이 보면 좋은 편 카드 (2026-04-20)
    ========================================================= */
 
-/* --- TL;DR 박스 (글 상단 요약) --- */
+/* --- TL;DR 박스 (글 상단 요약) — 2차 보정: 가독성+본문 균형 --- */
 .site-wrap .tldr-box {
   background: var(--code-bg);
-  border-left: 4px solid var(--primary);
-  padding: 18px 22px;
-  margin: 0 0 32px;
-  border-radius: 6px;
+  border-left: 5px solid var(--primary);  /* 4 → 5 좌측 강조 */
+  padding: 22px 26px;                      /* 18·22 → 22·26 호흡감 */
+  margin: 24px 0 32px;                     /* 위쪽 간격 추가 */
+  border-radius: 8px;                      /* 6 → 8 부드러움 */
 }
 .site-wrap .tldr-title {
-  font-size: 13px;
+  font-size: 14px;                         /* 13 → 14 강조 */
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;                  /* 0.08 → 0.04 압박감 완화 */
   text-transform: none;
-  color: color-mix(in srgb, var(--primary) 82%, black);
-  margin-bottom: 10px;
+  color: color-mix(in srgb, var(--primary) 90%, black);  /* 82% → 90% 더 진하게 */
+  margin-bottom: 12px;                     /* 10 → 12 헤더↔본문 호흡 */
 }
 .site-wrap .tldr-body {
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.8;                        /* 1.75 → 1.8 행간 여유 */
   color: var(--text);
 }
 .site-wrap .tldr-body p { margin-bottom: 6px; }
