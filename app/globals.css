@@ -555,6 +555,11 @@ footer {
   border-radius: 50%;
   background: var(--accent);
 }
+/* li 첫 자식이 inline code인 경우 = padding-left(6px)로 시작 위치가
+   일반 텍스트보다 안쪽으로 밀려 보이는 문제 보정 (margin으로 6px 좌측 시프트) */
+.site-wrap ul li > code:first-child {
+  margin-left: -6px;
+}
 
 /* ol — 번호 마커는 유지, 간격만 조정 */
 .site-wrap ol {
