@@ -612,11 +612,11 @@ footer {
   border-radius: 6px;
 }
 .site-wrap .tldr-title {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--primary);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: color-mix(in srgb, var(--primary) 82%, black);
   margin-bottom: 10px;
 }
 .site-wrap .tldr-body {
