@@ -29,7 +29,9 @@ const series = [
 ]
 
 export default function HomePage() {
-  const recent = getAllPublishedPosts().slice(0, 3)
+  const allPosts = getAllPublishedPosts()
+  const latest = allPosts[0]
+  const recent = allPosts.slice(0, 3)
   return (
     <main>
       {/* Hero — 1인칭 복수 화자, 엘라 내레이터 + 팀이 주인공 */}
@@ -45,10 +47,10 @@ export default function HomePage() {
           </h1>
           <p>
             클코가 또 실수하고, 토니가 그걸 고치고, 니봇이 조용히 다 지켜보는 작업실이에요.
-            AI 팀이 어떻게 성장하는지 그 과정을 그대로 남기고 있어요.
+            AI 워크스페이스와 OpenClaw 위에서 우리 팀이 어떻게 정착하는지 그 과정을 그대로 남기고 있어요.
           </p>
           <div className="cta-group">
-            <Link href="/records" className="btn btn-primary">최근 에피소드</Link>
+            <Link href={latest ? `/${latest.category}/${latest.slug}` : '/'} className="btn btn-primary">최근 에피소드</Link>
             <Link href="/about" className="btn btn-secondary">우리 팀 소개</Link>
           </div>
         </div>
